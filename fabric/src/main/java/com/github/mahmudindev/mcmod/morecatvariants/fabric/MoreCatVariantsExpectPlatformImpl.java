@@ -8,7 +8,7 @@ import net.minecraft.resources.ResourceLocation;
 import java.util.function.Supplier;
 
 public class MoreCatVariantsExpectPlatformImpl {
-    public static <T, V extends T> void registerRegistry(
+    public static <T, V extends T> Supplier<V> registerRegistryEntry(
             ResourceKey<? extends Registry<T>> resourceKey,
             ResourceLocation resourceLocation,
             Supplier<? extends V> supplier
@@ -19,6 +19,10 @@ public class MoreCatVariantsExpectPlatformImpl {
         }
 
         //noinspection unchecked
-        Registry.register((Registry<T>) registry, resourceLocation, supplier.get());
+        Registry<T> registryX = (Registry<T>) registry;
+
+        V registered = Registry.register(registryX, resourceLocation, supplier.get());
+
+        return () -> registered;
     }
 }
