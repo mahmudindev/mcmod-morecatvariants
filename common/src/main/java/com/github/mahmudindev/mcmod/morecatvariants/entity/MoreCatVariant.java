@@ -7,15 +7,15 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.animal.CatVariant;
 
 public class MoreCatVariant {
-    public static final ResourceLocation ABYSSINIAN = new ResourceLocation(
+    public static final ResourceLocation ABYSSINIAN = ResourceLocation.fromNamespaceAndPath(
             MoreCatVariants.MOD_ID,
             "abyssinian"
     );
-    public static final ResourceLocation SOMALI = new ResourceLocation(
+    public static final ResourceLocation SOMALI = ResourceLocation.fromNamespaceAndPath(
             MoreCatVariants.MOD_ID,
             "somali"
     );
-    public static final ResourceLocation SPHYNX = new ResourceLocation(
+    public static final ResourceLocation SPHYNX = ResourceLocation.fromNamespaceAndPath(
             MoreCatVariants.MOD_ID,
             "sphynx"
     );
@@ -27,10 +27,13 @@ public class MoreCatVariant {
     }
 
     private static void register(ResourceLocation resourceLocation, String texture) {
-        MoreCatVariantsExpectPlatform.registerRegistry(
+        MoreCatVariantsExpectPlatform.registerRegistryEntry(
                 Registries.CAT_VARIANT,
                 resourceLocation,
-                () -> new CatVariant(new ResourceLocation(MoreCatVariants.MOD_ID, texture))
+                () -> new CatVariant(ResourceLocation.fromNamespaceAndPath(
+                        MoreCatVariants.MOD_ID,
+                        texture
+                ))
         );
     }
 }

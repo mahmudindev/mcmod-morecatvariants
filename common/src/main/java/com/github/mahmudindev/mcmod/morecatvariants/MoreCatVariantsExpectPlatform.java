@@ -9,11 +9,11 @@ import java.util.function.Supplier;
 
 public class MoreCatVariantsExpectPlatform {
     @ExpectPlatform
-    public static <T, V extends T> void registerRegistry(
+    public static <T, V extends T> Supplier<V> registerRegistryEntry(
             ResourceKey<? extends Registry<T>> resourceKey,
             ResourceLocation resourceLocation,
             Supplier<? extends V> supplier
     ) {
-        return;
+        return () -> null;
     }
 }
