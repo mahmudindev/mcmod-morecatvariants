@@ -27,7 +27,7 @@ public class MoreCatVariant {
     }
 
     private static void register(ResourceLocation resourceLocation, String texture) {
-        MoreCatVariantsExpectPlatform.registerRegistry(
+        MoreCatVariantsExpectPlatform.registerRegistryEntry(
                 Registries.CAT_VARIANT,
                 resourceLocation,
                 () -> new CatVariant(new ResourceLocation(MoreCatVariants.MOD_ID, texture))
