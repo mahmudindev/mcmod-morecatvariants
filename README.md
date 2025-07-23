@@ -1,3 +1,3 @@
 # More Cat Variants
 
-Minecraft mod to add more cat variants.
+Minecraft pack to add more cat variants.

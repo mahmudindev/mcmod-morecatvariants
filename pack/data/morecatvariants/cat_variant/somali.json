@@ -1,0 +1,8 @@
+{
+  "asset_id": "morecatvariants:entity/cat/somali",
+  "spawn_conditions": [
+    {
+      "priority": 0
+    }
+  ]
+}
