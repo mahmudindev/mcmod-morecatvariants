@@ -1,0 +1,8 @@
+{
+  "asset_id": "morecatvariants:entity/cat/sphynx",
+  "spawn_conditions": [
+    {
+      "priority": 0
+    }
+  ]
+}
