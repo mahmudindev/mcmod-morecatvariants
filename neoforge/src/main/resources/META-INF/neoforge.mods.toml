@@ -1,31 +1,31 @@
 modLoader = "javafml"
-loaderVersion = "[4,)"
+loaderVersion = "${neoforge_loader_version_range}"
 issueTrackerURL = "https://github.com/mahmudindev/mcmod-morecatvariants/issues"
-license = "ARR"
+license = "${mod_license}"
 
 [[mods]]
-modId = "morecatvariants"
+modId = "${mod_id}"
 version = "${version}"
-displayName = "More Cat Variants"
-authors = "mahmudindev"
+displayName = "${mod_name}"
+authors = "${mod_authors}"
 description = '''
-Add more cat variants.
+${description}
 '''
-logoFile = "assets/morecatvariants/icon.png"
+logoFile = "assets/${mod_id}/icon.png"
 
-[[dependencies.morecatvariants]]
+[[dependencies.${mod_id}]]
 modId = "neoforge"
 type = "required"
-versionRange = "[21.5,)"
+versionRange = "${neoforge_version_range}"
 ordering = "NONE"
 side = "BOTH"
 
-[[dependencies.morecatvariants]]
+[[dependencies.${mod_id}]]
 modId = "minecraft"
 type = "required"
-versionRange = "[1.21.5,)"
+versionRange = "${minecraft_version_range}"
 ordering = "NONE"
 side = "BOTH"
 
 [[mixins]]
-config = "morecatvariants.mixins.json"
+config = "${mod_id}.mixins.json"
